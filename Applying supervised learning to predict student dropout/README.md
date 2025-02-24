@@ -37,20 +37,18 @@ Approximately 85% of the target values were in the Completed Course class, while
 15% represented students who did not complete the course.
 
 ### Features Used for Training the Model at Each Dataset Stage: 
-Stage 1: 
-o The model was trained using the following features: Course Level, Completed 
+- Stage 1: The model was trained using the following features: Course Level, Completed 
 Course, Is First Intake, Age, Gender, Nationality, Course Name, Centre_University, 
 and Booking_LeadSource. 
-Stage 2: 
-o All Stage 1 features were used, with Authorised Absence added. 
-Stage 3: 
-o The model was trained using all features from Stage 2, along with Assessed 
+- Stage 2: All Stage 1 features were used, with Authorised Absence added. 
+- Stage 3: The model was trained using all features from Stage 2, along with Assessed 
 Module, Passed Module, and Failed Module. 
 - The features used to train the model and test were 80-20 split.
 
 ### Neural Network Modelling Approach: 
 The sequential model type was used to build our neural network model, this is because we used 
-one input data set and want one output and used no branches in our model.  
+one input data set and want one output and used no branches in our model.
+
 In our initial model we used the following hyperparameters: 
 - Binary cross-entropy loss function was used as this is a binary classification 
 - Relu was the chosen hiddenlayer activation function, sigmoid activation function was used 
@@ -71,18 +69,18 @@ assess convergence.
 - The model was then evaluated on the test dataset, and the performance metrics (Accuracy, 
 Precision, Recall, and AUC) were calculated. 
 - Hyperparameter tuning was then conducted on the following parameter ranges:  
-o Neurons: [32, 64, 128] 
-o Activations: ['relu', 'tanh'] 
-o Regularization: [L1 regularization with 0.001, L1 regularization with 0.01] 
-o Optimizers: ['adam', 'rmsprop'] 
-o The architecture (number of hidden layers), epochs (20), and batch size (32) were 
+  -  Neurons: [32, 64, 128] 
+  - Activations: ['relu', 'tanh'] 
+  - Regularization: [L1 regularization with 0.001, L1 regularization with 0.01] 
+  - Optimizers: ['adam', 'rmsprop'] 
+  - The architecture (number of hidden layers), epochs (20), and batch size (32) were 
 kept constant during tuning. 
-o The combination of hyperparameters that achieved the highest validation AUC score 
+  - The combination of hyperparameters that achieved the highest validation AUC score 
 was selected, as AUC is a robust metric for evaluating performance on imbalanced 
 datasets. 
-- The best combination of hyperparameters from the tuning phase was used to train the final 
+  - The best combination of hyperparameters from the tuning phase was used to train the final 
 model.
-- Performance metrics were recorded and evaluated.
+  - Performance metrics were recorded and evaluated.
 
 Stage 2 & Stage 3 Dataset Model Training:
 - The initial models and hyperparameters from previous stages were used as starting points 
@@ -95,31 +93,30 @@ highest validation AUC) was selected to build the final model.
 
 Stage 1 Dataset Model Training 
 - The initial model was run with default hyperparameters to establish a baseline. 
-Performance metrics (accuracy, AUC, precision, and recall) were recorded. 
+- Performance metrics (accuracy, AUC, precision, and recall) were recorded. 
 - A feature importance chart was generated using the training data to identify key features. 
-Hyperparameter Tuning: 
-o A grid search was conducted to find the best combination of hyperparameters based 
+- Hyperparameter Tuning: A grid search was conducted to find the best combination of hyperparameters based 
 on the highest AUC score. The following hyperparameters were tuned: 
-o alpha: [0.1, 0.3, 0.5] 
-o max_depth: [3, 5, 7] 
-o learning_rate: [0.01, 0.1, 0.2] 
-o n_estimators: [50, 100, 200] 
-• Final Model: 
-o The best hyperparameter combination was used to train the final model, and 
+  - alpha: [0.1, 0.3, 0.5] 
+  - max_depth: [3, 5, 7] 
+  - learning_rate: [0.01, 0.1, 0.2] 
+  - n_estimators: [50, 100, 200] 
+- Final Model: 
+  - The best hyperparameter combination was used to train the final model, and 
 performance metrics were recorded.
 
 Stage 2 and Stage 3 Training 
-• The initial models and hyperparameters from previous stages were used as starting points 
-for training and testing the Stage 2 and Stage 3 models respectively. 
-• Hyperparameter tuning was conducted for both stages, with the best combinations selected 
+- The initial models and hyperparameters from previous stages were used as starting points 
+for training and testing the Stage 2 and Stage 3 models respectively.
+- Hyperparameter tuning was conducted for both stages, with the best combinations selected 
 based on the highest validation AUC. 
-• Performance metrics were recorded for both the initial and final models in each stage. 
+- Performance metrics were recorded for both the initial and final models in each stage. 
 
 ## Results
 ### Neural Network Model Results
-- please see the notebook 'Confidential_Company_Supervised_Learning_Project.ipynb'
+- Please see the notebook 'Confidential_Company_Supervised_Learning_Project.ipynb'
 ### XGBoost Model Results
-- please see the notebook 'Confidential_Company_Supervised_Learning_Project.ipynb'
+- Please see the notebook 'Confidential_Company_Supervised_Learning_Project.ipynb'
   
 ## Conclusions:
 
