@@ -4,7 +4,7 @@ Problem Statement: Confidential_Client plans to develop a predictive model that 
 
 In this project, we will examine student data and use supervised learning techniques to predict whether a student will drop out. In the education sector, retaining students is vital for the institution's financial stability and for students’ academic success and personal development. A high dropout rate can lead to significant revenue loss, diminished institutional reputation, and lower overall student satisfaction.
 
-The three Datasets provided are:
+The three Datasets provided were:
 
 1.  Applicant and course information
 2.  Student and engagement data
@@ -23,7 +23,8 @@ A new feature, Age, was derived from Date of Birth, highly correlated features w
 reduce dimensionality and address multicollinearity—Centre Name and Progression University 
 were combined into Centre_University, while Booking Type and Lead Source were merged into 
 Booking_LeadSource. Categorical variables were encoded using One-Hot Encoding for nominal 
-features and Ordinal Encoding for ordinal features 
+features and Ordinal Encoding for ordinal features.
+
 In the stage 2 and 3 Dataset the additional features (not in Stage 1) were all numeric but contained 
 missing values. These missing values were imputed using median for the features with skewed 
 distribution, mode for features with extremely skewed distribution. 
